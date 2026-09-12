@@ -1,0 +1,594 @@
+/* =========================================
+   SUPPORT SECTION STYLES
+   Member 5 - Anjali
+   ========================================= */
+
+.support-page {
+  min-height: 100vh;
+  padding: 32px 20px;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.support-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------- Card ---------- */
+
+.support-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* ---------- Heading ---------- */
+
+.support-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.support-subtitle {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* ---------- Order Information ---------- */
+
+.order-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.order-info-box {
+  padding: 16px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.order-info-label {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.order-info-value {
+  margin: 5px 0 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ---------- Status Selector ---------- */
+
+.status-section {
+  margin-top: 24px;
+}
+
+.status-label {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.status-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.status-button {
+  padding: 9px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.status-button:hover {
+  background: #f3f4f6;
+}
+
+.status-button.active {
+  border-color: #16a34a;
+  background: #16a34a;
+  color: #ffffff;
+}
+
+/* ---------- Timeline ---------- */
+
+.timeline-card {
+  margin-top: 20px;
+}
+
+.timeline-header {
+  margin-bottom: 28px;
+}
+
+.timeline-title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.timeline-type {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.timeline {
+  width: 100%;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  min-height: 78px;
+}
+
+.timeline-marker-area {
+  position: relative;
+  width: 34px;
+  flex-shrink: 0;
+}
+
+.timeline-marker {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #9ca3af;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.timeline-marker.completed,
+.timeline-marker.current {
+  border-color: #16a34a;
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 32px;
+  left: 15px;
+  width: 2px;
+  height: 46px;
+  background: #e5e7eb;
+}
+
+.timeline-line.completed {
+  background: #16a34a;
+}
+
+.timeline-content {
+  padding-left: 14px;
+  padding-bottom: 22px;
+}
+
+.timeline-stage {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.timeline-stage.completed {
+  color: #1f2937;
+}
+
+.timeline-stage.current {
+  color: #16a34a;
+}
+
+.timeline-description {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.timeline-description.current {
+  color: #6b7280;
+}
+
+/* ---------- Status Badge ---------- */
+
+.delivery-status-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.delivery-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.delivery-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-accepted {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-preparing {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.status-ready {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.status-out {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.status-delivered {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-picked {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 640px) {
+  .support-page {
+    padding: 20px 14px;
+  }
+
+  .support-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .support-title {
+    font-size: 25px;
+  }
+
+  .order-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-buttons {
+    flex-direction: column;
+  }
+
+  .status-button {
+    width: 100%;
+    text-align: left;
+  }
+}
+/* =========================================
+   NOTIFICATION CARD
+   ========================================= */
+
+.notification-card {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.notification-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.07);
+}
+
+.notification-unread {
+  border-color: #bbf7d0;
+  background: #f7fff9;
+}
+
+.notification-read {
+  border-color: #e5e7eb;
+  background: #ffffff;
+}
+
+/* ---------- Content Layout ---------- */
+
+.notification-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* ---------- Icon ---------- */
+
+.notification-icon {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.notification-icon-unread {
+  background: #dcfce7;
+}
+
+.notification-icon-read {
+  background: #f3f4f6;
+}
+
+/* ---------- Main ---------- */
+
+.notification-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.notification-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.notification-title {
+  display: inline-block;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.notification-new {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.notification-message {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.notification-meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* ---------- Mark Read ---------- */
+
+.notification-read-button {
+  flex-shrink: 0;
+  padding: 8px 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.notification-read-button:hover {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 640px) {
+  .notification-content {
+    flex-wrap: wrap;
+  }
+
+  .notification-main {
+    width: calc(100% - 56px);
+  }
+
+  .notification-read-button {
+    margin-left: 56px;
+  }
+}
+/* =========================================
+   REVIEW FORM
+   ========================================= */
+
+.review-field {
+  margin-top: 24px;
+}
+
+.review-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ---------- Stars ---------- */
+
+.review-stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.review-star {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #d1d5db;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 1;
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
+}
+
+.review-star:hover {
+  transform: scale(1.08);
+}
+
+.review-star.selected {
+  color: #16a34a;
+}
+
+.review-rating-text {
+  margin: 8px 0 0;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ---------- Textarea ---------- */
+
+.review-textarea {
+  display: block;
+  width: 100%;
+  min-height: 130px;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #111827;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.review-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.review-textarea:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.08);
+}
+
+/* ---------- Character Count ---------- */
+
+.review-character-count {
+  margin-top: 6px;
+  text-align: right;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* ---------- Submit ---------- */
+
+.review-submit-button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px 18px;
+  border: 1px solid #16a34a;
+  border-radius: 12px;
+  background: #16a34a;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.review-submit-button:hover {
+  background: #15803d;
+}
+
+.review-submit-button:active {
+  transform: translateY(1px);
+}
+
+/* ---------- Success ---------- */
+
+.review-success {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 640px) {
+  .review-star {
+    font-size: 28px;
+  }
+
+  .review-submit-button {
+    padding: 11px 15px;
+  }
+}
