@@ -1,0 +1,7 @@
+export const CATEGORIES = {
+  ALL: "ALL",
+  FOOD: "FOOD",
+  BEVERAGES: "BEVERAGES",
+  SNACKS: "SNACKS",
+  DESSERTS: "DESSERTS",
+};

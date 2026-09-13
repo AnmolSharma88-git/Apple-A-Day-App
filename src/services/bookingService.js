@@ -1,7 +1,15 @@
 import { mockBookings } from "../mock/bookings"
 
 export function getAllBookings() {
-  return Promise.resolve(mockBookings)
+  return Promise.resolve([...mockBookings])
+}
+
+export function getBookingById(bookingId) {
+  const booking = mockBookings.find(
+    (booking) => booking.id === bookingId
+  )
+
+  return Promise.resolve(booking || null)
 }
 
 export function updateBookingStatus(
@@ -20,5 +28,7 @@ export function updateBookingStatus(
 
   booking.status = newStatus
 
-  return Promise.resolve(booking)
+  return Promise.resolve({
+    ...booking,
+  })
 }

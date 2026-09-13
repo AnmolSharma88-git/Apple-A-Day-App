@@ -6,6 +6,7 @@ export const mockMenu = [
     price: 80,
     category: "FOOD",
     image: "",
+    stock: 20,
     available: true,
   },
 
@@ -16,6 +17,7 @@ export const mockMenu = [
     price: 120,
     category: "FOOD",
     image: "",
+    stock: 15,
     available: true,
   },
 
@@ -26,6 +28,7 @@ export const mockMenu = [
     price: 60,
     category: "BEVERAGES",
     image: "",
+    stock: 25,
     available: true,
   },
 
@@ -36,6 +39,7 @@ export const mockMenu = [
     price: 70,
     category: "SNACKS",
     image: "",
+    stock: 0,
     available: false,
   },
 
@@ -46,6 +50,7 @@ export const mockMenu = [
     price: 60,
     category: "FOOD",
     image: "",
+    stock: 18,
     available: true,
   },
-]
+];
