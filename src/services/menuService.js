@@ -1,47 +1,51 @@
-import {
-  collection,
-  addDoc,
-  getDocs,
-  doc,
-  updateDoc,
-  deleteDoc,
-} from "firebase/firestore";
+import { mockMenu } from "../mock/menu"
 
-import db from "../firebase/firestore";
+export function getAllMenuItems() {
+  return Promise.resolve(mockMenu)
+}
 
-// Add menu item
-export const addMenuItem = async (menuItem) => {
-  const docRef = await addDoc(
-    collection(db, "menu"),
-    menuItem
-  );
+export function addMenuItem(menuItem) {
+  const newItem = {
+    ...menuItem,
+    id: `MENU${Date.now()}`,
+  }
 
-  return docRef.id;
-};
+  mockMenu.push(newItem)
 
-// Get all menu items
-export const getMenuItems = async () => {
-  const snapshot = await getDocs(
-    collection(db, "menu")
-  );
+  return Promise.resolve(newItem)
+}
 
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
-  }));
-};
+export function updateMenuItem(itemId, updates) {
+  const index = mockMenu.findIndex(
+    (item) => item.id === itemId
+  )
 
-// Update menu item
-export const updateMenuItem = async (id, data) => {
-  await updateDoc(
-    doc(db, "menu", id),
-    data
-  );
-};
+  if (index === -1) {
+    return Promise.reject(
+      new Error("Menu item not found")
+    )
+  }
 
-// Delete menu item
-export const deleteMenuItem = async (id) => {
-  await deleteDoc(
-    doc(db, "menu", id)
-  );
-};
+  mockMenu[index] = {
+    ...mockMenu[index],
+    ...updates,
+  }
+
+  return Promise.resolve(mockMenu[index])
+}
+
+export function deleteMenuItem(itemId) {
+  const index = mockMenu.findIndex(
+    (item) => item.id === itemId
+  )
+
+  if (index === -1) {
+    return Promise.reject(
+      new Error("Menu item not found")
+    )
+  }
+
+  mockMenu.splice(index, 1)
+
+  return Promise.resolve()
+}

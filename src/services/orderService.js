@@ -1,57 +1,29 @@
-import {
-  collection,
-  addDoc,
-  getDocs,
-  doc,
-  updateDoc,
-} from "firebase/firestore";
+import { mockOrders } from "../mock/orders"
 
-import db from "../firebase/firestore";
+export function getAllOrders() {
+  return Promise.resolve(mockOrders)
+}
 
-// Create order
-export const createOrder = async (order) => {
-  const docRef = await addDoc(
-    collection(db, "orders"),
-    order
-  );
+export function getOrderById(orderId) {
+  const order = mockOrders.find(
+    (order) => order.id === orderId
+  )
 
-  return docRef.id;
-};
+  return Promise.resolve(order || null)
+}
 
-// Get all orders
-export const getOrders = async () => {
-  const snapshot = await getDocs(
-    collection(db, "orders")
-  );
+export function updateOrderStatus(orderId, newStatus) {
+  const order = mockOrders.find(
+    (order) => order.id === orderId
+  )
 
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
-  }));
-};
+  if (!order) {
+    return Promise.reject(
+      new Error("Order not found")
+    )
+  }
 
-// Update order status
-export const updateOrderStatus = async (
-  orderId,
-  status
-) => {
-  await updateDoc(
-    doc(db, "orders", orderId),
-    {
-      orderStatus: status,
-    }
-  );
-};
+  order.status = newStatus
 
-// Update payment status
-export const updatePaymentStatus = async (
-  orderId,
-  status
-) => {
-  await updateDoc(
-    doc(db, "orders", orderId),
-    {
-      paymentStatus: status,
-    }
-  );
-};
+  return Promise.resolve(order)
+}
