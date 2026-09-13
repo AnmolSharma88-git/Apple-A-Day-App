@@ -1,23 +1,23 @@
-﻿function Delivery() {
+function CabinBooking() {
   return (
     <section>
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-slate-900">
-          Delivery
+          Cabin Bookings
         </h1>
 
         <p className="mt-2 text-slate-500">
-          Manage delivery orders and delivery operations.
+          Manage student cabin booking requests.
         </p>
       </div>
 
       <div className="rounded-xl bg-white p-6 shadow-sm">
         <p className="text-slate-500">
-          Delivery management will be added here.
+          Cabin booking management will be added here.
         </p>
       </div>
     </section>
   )
 }
 
-export default Delivery;
+export default CabinBooking;
