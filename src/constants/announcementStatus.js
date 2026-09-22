@@ -1,0 +1,4 @@
+export const ANNOUNCEMENT_STATUS = {
+  DRAFT: "DRAFT",
+  PUBLISHED: "PUBLISHED",
+}

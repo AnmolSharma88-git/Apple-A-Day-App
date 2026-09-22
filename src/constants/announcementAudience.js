@@ -1,0 +1,4 @@
+export const ANNOUNCEMENT_AUDIENCE = {
+  ALL: "ALL",
+  CUSTOMERS: "CUSTOMER",
+}
